@@ -1,0 +1,14 @@
+@import "../../../../../styles";
+
+.description{
+  color: $white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: right;
+  margin: 0;
+
+  &description__username{
+    font-weight: 200;
+  }
+}
