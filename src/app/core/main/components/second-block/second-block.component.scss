@@ -1,0 +1,63 @@
+@import "../../../../../styles.scss";
+
+.section{
+  max-width: 50rem;
+
+
+  .header {
+    text-align: right;
+    color: $white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 5rem;
+    margin-right: 2rem;
+  }
+
+  @media screen and (min-width: 960px) {
+    .header {
+      text-align: center;
+      margin: 10rem;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: end;
+
+    .button {
+      padding: 1.3rem;
+      color: $gray;
+      border-radius: 0.5rem;
+      border: 1px solid $gray;
+      width: 20rem;
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 700;
+      background: transparent;
+
+      &:hover {
+        background: linear-gradient(90deg, $primary--darker, $primary);
+        color: $white;
+      }
+    }
+  }
+  @media screen and (min-width: 960px) {
+    .buttons {
+      gap: 4rem;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .section {
+    width: 50rem;
+  }
+}
+

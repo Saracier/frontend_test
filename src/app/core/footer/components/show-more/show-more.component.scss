@@ -1,0 +1,70 @@
+@import "../../../../../styles.scss";
+
+.show {
+  width: 25rem;
+  text-transform: uppercase;
+  position: relative;
+  font-size: 1.6rem;
+  background: transparent;
+  font-weight: 700;
+  border: 1px solid $gray;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 0.4rem;
+  color: $gray;
+
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    border-color: $gray;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  &__list {
+    list-style: none;
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: $white;
+    bottom: 9.5rem;
+    -webkit-box-shadow: 8px 1px 35px 9px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 8px 1px 35px 9px rgba(0, 0, 0, 1);
+    box-shadow: 8px 1px 35px 9px rgba(0, 0, 0, 1);
+    padding: 1rem;
+    cursor: auto
+  }
+
+    &__arrow {
+      display: block;
+      margin: 10px ;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid $gray;
+      border-left: 2px solid $gray;
+      transform: rotate(45deg);
+      margin-top: 1.5rem;
+    }
+
+  &__checkbox {
+    display: none;
+
+    &:checked ~ .show__button .show__arrow {
+      margin-top: 1rem;
+      transform: rotate(225deg);
+    }
+
+    &:checked ~ .show__list {
+      display: block;
+      opacity: 1;
+    }
+
+    &:checked ~ .show__button {
+      color: $white;
+      border-color: $white;
+    }
+  }
+}

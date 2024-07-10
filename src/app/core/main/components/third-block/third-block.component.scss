@@ -1,0 +1,29 @@
+@import "../../../../../styles.scss";
+
+.section {
+  max-width: 50rem;
+
+  .header {
+    text-align: center;
+    color: $white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  .lorem {
+    color: $gray;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .section {
+    width: 50rem;
+  }
+}

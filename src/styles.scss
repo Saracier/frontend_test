@@ -1,14 +1,11 @@
-$header--dark: rgb(11, 12, 16);
-$background--main: rgb(42, 45, 54);
-$white: rgb(255, 255, 255);
-$primary: rgb(232, 131, 1);
-
-:export {
-  header--dark: $header--dark;
-  background--main: $background--main;
-  white: $white;
-  primary: $primary;
-}
+$header--dark: rgb(15, 15, 15);
+$background--main: rgb(40, 45, 52);
+$white: rgb(245, 245, 245);
+$primary: rgb(230, 130, 0);
+$primary--darker: rgb(184, 104, 4);
+$gray: rgba(164,168,181,255);
+$footer-dark: rgb(23, 23, 23);
+$footer-gray: rgba(43,44,51,255);
 
 //RESET CSS
 .flex--center {
@@ -63,4 +60,8 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+fieldset {
+  border: none;
 }

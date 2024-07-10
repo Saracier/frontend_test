@@ -1,0 +1,10 @@
+<section class="section">
+  <header class="header"><b>BLOK PIERWSZY</b></header>
+  <fieldset>
+  <div>
+    <app-radio (click)=changeSelect(1) [isSelected]="selected == 1" radioName="first block" label="Opcja pierwsza"></app-radio>
+    <app-radio (click)=changeSelect(2) [isSelected]="selected == 2" radioName="second block" label="Opcja druga"></app-radio>
+  </div>
+  <app-radio (click)=changeSelect(3) [isSelected]="selected == 3" radioName="random block" label="Opcja losowa"></app-radio>
+  </fieldset>
+</section>
