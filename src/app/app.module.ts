@@ -14,6 +14,7 @@ import { ThirdBlockComponent } from './core/main/components/third-block/third-bl
 import {FooterComponent} from "./core/footer/footer.component";
 import {ShowMoreComponent} from "./core/footer/components/show-more/show-more.component";
 import { SingleItemComponent } from './core/footer/components/show-more/single-item/single-item.component';
+import {ShowNameService} from "./services/show-names/show-name.service";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { SingleItemComponent } from './core/footer/components/show-more/single-i
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [ShowNameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
