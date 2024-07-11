@@ -18,6 +18,7 @@ import {ShowNameService} from "./services/show-names/show-name.service";
 import {LoremService} from "./services/lorem/lorem.service";
 import {HttpClientModule} from "@angular/common/http";
 import {FormHelperService} from "./services/form-helper/form-helper.service";
+import { AbbreviateStringPipe } from './pipes/abbreviate-string/abbreviate-string.pipe';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import {FormHelperService} from "./services/form-helper/form-helper.service";
     FooterComponent,
     ShowMoreComponent,
     SingleItemComponent,
+    AbbreviateStringPipe,
   ],
   imports: [
     BrowserModule,
