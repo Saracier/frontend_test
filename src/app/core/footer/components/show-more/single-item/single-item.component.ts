@@ -7,5 +7,5 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./single-item.component.scss']
 })
 export class SingleItemComponent {
-@Input() content: string = '';
+@Input() content = '';
 }

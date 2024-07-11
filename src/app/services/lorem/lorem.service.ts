@@ -27,7 +27,7 @@ export class LoremService {
     const chosenLorem = this.checkFormForData(2)
 
     if(!chosenLorem || this.dataToShow().find(data => data.id === chosenLorem.id)) {
-      alert('Błąd unikalności danych.');
+      alert('Błąd danych.');
       return
     }
 
@@ -72,7 +72,7 @@ export class LoremService {
     }
   }
 
-  private pickUniqueLorem(loopIteration: number = 0): ILoremData | void {
+  private pickUniqueLorem(loopIteration = 0): ILoremData | void {
     if(loopIteration > this.loremData().length) {
       return
     }
