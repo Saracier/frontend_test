@@ -59,7 +59,7 @@ export class LoremService {
         return this.loremData()[0];
       case FormOptionsEnum.Option2:
         return this.loremData()[1];
-      case FormOptionsEnum.Option3:
+      case FormOptionsEnum.OptionRandom:
         if(chosenButton === 1) {
           return this.pickRandomLorem();
         } else {
