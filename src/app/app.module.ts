@@ -15,6 +15,9 @@ import {FooterComponent} from "./core/footer/footer.component";
 import {ShowMoreComponent} from "./core/footer/components/show-more/show-more.component";
 import { SingleItemComponent } from './core/footer/components/show-more/single-item/single-item.component';
 import {ShowNameService} from "./services/show-names/show-name.service";
+import {LoremService} from "./services/lorem/lorem.service";
+import {HttpClientModule} from "@angular/common/http";
+import {FormHelperService} from "./services/form-helper/form-helper.service";
 
 @NgModule({
   declarations: [
@@ -34,8 +37,9 @@ import {ShowNameService} from "./services/show-names/show-name.service";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [ShowNameService],
+  providers: [ShowNameService, LoremService, FormHelperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

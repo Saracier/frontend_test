@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, computed, inject, Signal, WritableSignal} from '@angular/core';
+import {LoremService} from "../../../../services/lorem/lorem.service";
+import {ILoremData} from "../../../../models/ILoremData";
 
 @Component({
   selector: 'app-third-block',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./third-block.component.scss']
 })
 export class ThirdBlockComponent {
-
+  private readonly LoremService = inject(LoremService);
+  protected dataToShow: WritableSignal<ILoremData[]> = this.LoremService.dataToShow;
+  protected readonly computedData: Signal<string> = computed( () =>
+    this.LoremService.dataToShow().map(data => data.textContent).join("")
+  )
 }

@@ -1,0 +1,28 @@
+{
+  "loremData": [
+    {
+      "id": 0,
+      "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "id": 1,
+      "textContent": "Sed do eiusmod tempor incididunt ut labore et dolore."
+    },
+    {
+      "id": 2,
+      "textContent": "Magna aliqua. Ut enim ad minim veniam, quis nostrud."
+    },
+    {
+      "id": 3,
+      "textContent": "Exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+    },
+    {
+      "id": 4,
+      "textContent": "Consequat. Duis aute irure dolor in reprehenderit in voluptate."
+    },
+    {
+      "id": 5,
+      "textContent": "Velit esse cillum dolore eu fugiat nulla pariatur."
+    }
+  ]
+}

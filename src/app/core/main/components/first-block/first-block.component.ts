@@ -1,4 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
+import {FormHelperService} from "../../../../services/form-helper/form-helper.service";
+import {FormOptionsEnum} from "../../../../models/formOptionsEnum";
 
 @Component({
   selector: 'app-first-block',
@@ -6,9 +8,13 @@ import {Component} from '@angular/core';
   styleUrls: ['./first-block.component.scss']
 })
 export class FirstBlockComponent {
-  protected selected: number;
+  private readonly FormHelperService = inject(FormHelperService);
+  protected selected = this.FormHelperService.selectedOption;
+  protected readonly FormOptions = FormOptionsEnum;
 
   changeSelect(number: number) :void {
-    this.selected = number;
+    console.log('n', number)
+    this.FormHelperService.pickOption(number);
   }
+
 }
