@@ -16,32 +16,25 @@ import {ShowMoreComponent} from "./core/footer/components/show-more/show-more.co
 import { SingleItemComponent } from './core/footer/components/show-more/single-item/single-item.component';
 import {ShowNameService} from "./services/show-names/show-name.service";
 import {LoremService} from "./services/lorem/lorem.service";
-import {HttpClientModule} from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import {FormHelperService} from "./services/form-helper/form-helper.service";
 import { AbbreviateStringPipe } from './pipes/abbreviate-string/abbreviate-string.pipe';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    LogoComponent,
-    DescriptionComponent,
-    MainComponent,
-    FirstBlockComponent,
-    RadioComponent,
-    SecondBlockComponent,
-    ThirdBlockComponent,
-    FooterComponent,
-    ShowMoreComponent,
-    SingleItemComponent,
-    AbbreviateStringPipe,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [ShowNameService, LoremService, FormHelperService],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        LogoComponent,
+        DescriptionComponent,
+        MainComponent,
+        FirstBlockComponent,
+        RadioComponent,
+        SecondBlockComponent,
+        ThirdBlockComponent,
+        FooterComponent,
+        ShowMoreComponent,
+        SingleItemComponent,
+        AbbreviateStringPipe,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule], providers: [ShowNameService, LoremService, FormHelperService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

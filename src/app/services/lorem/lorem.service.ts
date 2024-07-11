@@ -1,6 +1,6 @@
 import {inject, Injectable, signal, WritableSignal} from '@angular/core';
 import {ILoremData} from "../../models/ILoremData";
-import {HttpClient} from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import {FormHelperService} from "../form-helper/form-helper.service";
 import {FormOptionsEnum} from "../../models/formOptionsEnum";
 
