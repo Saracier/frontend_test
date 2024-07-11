@@ -2,6 +2,7 @@ import {Component, inject} from '@angular/core';
 import {LoremService} from "../../../../services/lorem/lorem.service";
 
 @Component({
+  standalone: true,
   selector: 'app-second-block',
   templateUrl: './second-block.component.html',
   styleUrls: ['./second-block.component.scss']

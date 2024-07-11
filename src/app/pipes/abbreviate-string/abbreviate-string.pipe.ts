@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'abbreviateString'
+  name: 'abbreviateString',
+  standalone: true
 })
 export class AbbreviateStringPipe implements PipeTransform {
 
