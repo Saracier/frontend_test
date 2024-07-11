@@ -24,19 +24,30 @@ export class LoremService {
   }
 
   public stickDataOption() {
-    const uniqueLorem = this.pickUniqueLorem();
+    const chosenLorem = this.checkFormForData(2)
 
-    if(!uniqueLorem) {
+    if(!chosenLorem || this.dataToShow().find(data => data.id === chosenLorem.id)) {
       alert('Błąd unikalności danych.');
       return
     }
 
     let dataToShow = this.dataToShow();
     dataToShow = this.sortLoremStringsArray(dataToShow)
-    this.dataToShow.set([...dataToShow, uniqueLorem]);
+    this.dataToShow.set([...dataToShow, chosenLorem]);
   }
 
   public replaceDataOption() {
+    const chosenLorem = this.checkFormForData(2)
+
+    if(!chosenLorem) {
+      alert('Błąd danych.');
+      return
+    }
+
+    this.dataToShow.set(Array(chosenLorem));
+  }
+
+  checkFormForData(chosenButton: number) {
     const selectedOption: number = this.FormHelperService.selectedOption()
 
     switch (selectedOption) {
@@ -45,17 +56,15 @@ export class LoremService {
         break;
 
       case FormOptionsEnum.Option1:
-        this.dataToShow.set(Array(this.loremData()[0]));
-        break;
-
+        return this.loremData()[0];
       case FormOptionsEnum.Option2:
-        this.dataToShow.set(Array(this.loremData()[1]));
-        break;
-
+        return this.loremData()[1];
       case FormOptionsEnum.Option3:
-        const data = this.pickRandomLorem();
-        this.dataToShow.set(Array(data));
-        break;
+        if(chosenButton === 1) {
+          return this.pickRandomLorem();
+        } else {
+          return this.pickUniqueLorem();
+        }
 
       default:
         console.error('error switch case')
